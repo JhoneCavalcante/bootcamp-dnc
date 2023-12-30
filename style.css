@@ -1,51 +1,142 @@
+    :root { /*criação de padrões de variáveis que facilita na edição */
+        --azul-dnc: #0C70F2;
+        --preto-dnc: #303030;
+        --cinza-houver: #C9C9C9;
+        --fonte-padrao: 'Inter';
+    }
+    
+
     body {
         margin: 0px; /*Margem externa*/
         padding: 0px; /*Margem interna*/
+        background: linear-gradient(180deg , rgba(12, 112, 242, 0.5)20%, rgba(12, 112, 242, 0)25%), #303030;
+        background-repeat: no-repeat;
     }
 
-    #principal {
-        width: 100%;
-        height: 100%;
-        border: 1px solid black; /*coloca borda*/
-        background-color: #303030;
-        font-size: 25px;
-        font-weight: 600;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 3px solid #BABABA;
-    }
+        #principal {
+            width: 100%;
+            height: 100%;
+            border: 1px solid black; /*coloca borda*/
+            background-color: var(--preto-dnc);
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #BABABA;
+        }
 
-    #menu {
-        display: flex;
-        width: 45%;
-        justify-content: space-around; /*Define o espaço que sobra*/
-        align-items: center; /*Alinhamento vertical*/
-        margin-left: 5%; /*Ter margem a esquerda*/
-    }
+            #menu {
+                display: flex;
+                width: 45%;
+                justify-content: space-around; /*Define o espaço que sobra*/
+                align-items: center; /*Alinhamento vertical*/
+                margin-left: 5%; /*Ter margem a esquerda*/
+            }
 
-    #principal div a {
-        font-family: Inter;
-        font-size: 25px;
-        font-weight: 600; /*Espessura da fonte*/
-        color: white;
-        text-decoration: none; /*   retira o underline*/
-    }
+                #principal div a {
+                    font-family: var(--fonte-padrao);
+                    font-size: 25px;
+                    font-weight: 600; /*Espessura da fonte*/
+                    color: white;
+                    text-decoration: none; /*   retira o underline*/
+                }
 
-    #principal div a:hover { /*aplicação de quando o mouse passa por cima do objeto*/
-        color: #cccc;
-    }
+                #principal div a:hover { /*aplicação de quando o mouse passa por cima do objeto*/
+                    color: var(--cinza-houver);
+                }
 
-    #principal button {
-        margin-right: 5%; /*ter margem a direita*/
-        background-color: rgb(6, 6, 247);
-        height: 40px;
-        width: 80px;
-        font-family: Inter;
-        font-size: 20px;
-        font-weight: 600;
-        color: white;
-        box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.251);  /*regular sombra  1ºhorizontal 2ºvertical 3ºesfumaçado*/
-        cursor: pointer;/*aparecer um cursor no mouse*/
-    }
+            #principal button {
+                margin-right: 5%; /*ter margem a direita*/
+                background-color: var(--azul-dnc);
+                height: 40px;
+                width: 80px;
+                font-family: var(--fonte-padrao);
+                font-size: 20px;
+                font-weight: 600;
+                border-radius: 5px;
+                color: white;
+                box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.251);  /*regular sombra  1ºhorizontal 2ºvertical 3ºesfumaçado*/
+                cursor: pointer;/*Aparecer um cursor do mouse*/
+            }
+
+    /*Seção principal do site*/
+
+        section {
+            display: flex;
+            flex-direction: column; /*Direção do flex em coluna*/
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+    
+
+        }
+
+            header {
+                color: white;
+                font-family: var(--fonte-padrao);
+            }
+
+                header h1{
+                    text-transform: uppercase; /*Tudo maiusculo*/
+                    font-size: 80px;
+                    font-weight: 800;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                header h2{
+                    text-align: center;
+                    font-size: 40px;
+                    font-weight: 700;
+                    margin-bottom: 100px;
+                }
+    
+                header .invert {
+                    background-color: black;
+                    font-weight: bold;
+                    padding: 5px;
+                }
+
+            form {
+                color: white;
+                font-family: var(--fonte-padrao);
+            } 
+            
+                div .form-group {
+                    font-size: 20px;
+                    align-items: center;
+                }
+
+                .campo {
+                    display: block;
+                    width: 400px;
+                    height: 30px;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    padding: 8px;
+                    border: 2px solid #dfdfdf;
+                    
+                }
+
+                .caixa {
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                }
+
+                .bot {
+                    width: 417px;
+                    height: 30px;
+                    background-color: var(--azul-dnc);
+                    color: white;
+                    font-family: var(--fonte-padrao);
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    margin-top: 20px;
+                
+                }
